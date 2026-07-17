@@ -113,48 +113,10 @@
                         </div>
                     </div>
 
-                    <!-- 과목별 공부시간 입력 그리드 -->
+                    <!-- 과목별 공부시간 입력 그리드 (수학, 영어, 세계지리로 변경) -->
                     <div class="flex flex-col gap-3">
                         <label class="block text-xs font-semibold text-slate-600">과목별 학습 시간 (단위: 시간)</label>
                         
-                        <!-- 국어 -->
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-xl border border-rose-100 bg-rose-50 gap-2.5">
-                            <div class="flex items-center gap-2">
-                                <div class="p-1.5 rounded-lg bg-rose-500 text-white shadow-xs">
-                                    <i class="fa-solid fa-book-open text-xs"></i>
-                                </div>
-                                <span class="font-bold text-slate-900 text-xs">국어</span>
-                            </div>
-                            <div class="flex items-center gap-1 ml-auto sm:ml-0">
-                                <button type="button" onclick="adjustStudyTime('korean', -0.5)" class="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-600 font-bold hover:bg-slate-100 active:scale-95 transition text-[11px]">-0.5</button>
-                                <div class="relative flex items-center max-w-[75px]">
-                                    <input type="number" id="time-korean" step="0.1" min="0" max="24" placeholder="0" class="w-full text-center font-extrabold text-slate-900 text-xs border border-slate-200 bg-white rounded-lg py-1 focus:outline-none focus:ring-1 focus:ring-indigo-500" />
-                                    <span class="absolute right-1.5 text-[9px] font-semibold text-slate-400 pointer-events-none">h</span>
-                                </div>
-                                <button type="button" onclick="adjustStudyTime('korean', 0.5)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-100 active:scale-95 transition text-[10px]">+30분</button>
-                                <button type="button" onclick="adjustStudyTime('korean', 1.0)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-100 active:scale-95 transition text-[10px]">+1시간</button>
-                            </div>
-                        </div>
-
-                        <!-- 영어 -->
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-xl border border-indigo-100 bg-indigo-50 gap-2.5">
-                            <div class="flex items-center gap-2">
-                                <div class="p-1.5 rounded-lg bg-indigo-500 text-white shadow-xs">
-                                    <i class="fa-solid fa-globe text-xs"></i>
-                                </div>
-                                <span class="font-bold text-slate-900 text-xs">영어</span>
-                            </div>
-                            <div class="flex items-center gap-1 ml-auto sm:ml-0">
-                                <button type="button" onclick="adjustStudyTime('english', -0.5)" class="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-600 font-bold hover:bg-slate-100 active:scale-95 transition text-[11px]">-0.5</button>
-                                <div class="relative flex items-center max-w-[75px]">
-                                    <input type="number" id="time-english" step="0.1" min="0" max="24" placeholder="0" class="w-full text-center font-extrabold text-slate-900 text-xs border border-slate-200 bg-white rounded-lg py-1 focus:outline-none focus:ring-1 focus:ring-indigo-500" />
-                                    <span class="absolute right-1.5 text-[9px] font-semibold text-slate-400 pointer-events-none">h</span>
-                                </div>
-                                <button type="button" onclick="adjustStudyTime('english', 0.5)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-100 active:scale-95 transition text-[10px]">+30분</button>
-                                <button type="button" onclick="adjustStudyTime('english', 1.0)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-100 active:scale-95 transition text-[10px]">+1시간</button>
-                            </div>
-                        </div>
-
                         <!-- 수학 -->
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-xl border border-violet-100 bg-violet-50 gap-2.5">
                             <div class="flex items-center gap-2">
@@ -174,22 +136,41 @@
                             </div>
                         </div>
 
-                        <!-- 과학 -->
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-xl border border-emerald-100 bg-emerald-50 gap-2.5">
+                        <!-- 영어 -->
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-xl border border-indigo-100 bg-indigo-50 gap-2.5">
                             <div class="flex items-center gap-2">
-                                <div class="p-1.5 rounded-lg bg-emerald-500 text-white shadow-xs">
-                                    <i class="fa-solid fa-flask text-xs"></i>
+                                <div class="p-1.5 rounded-lg bg-indigo-500 text-white shadow-xs">
+                                    <i class="fa-solid fa-language text-xs"></i>
                                 </div>
-                                <span class="font-bold text-slate-900 text-xs">과학</span>
+                                <span class="font-bold text-slate-900 text-xs">영어</span>
                             </div>
                             <div class="flex items-center gap-1 ml-auto sm:ml-0">
-                                <button type="button" onclick="adjustStudyTime('science', -0.5)" class="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-600 font-bold hover:bg-slate-100 active:scale-95 transition text-[11px]">-0.5</button>
+                                <button type="button" onclick="adjustStudyTime('english', -0.5)" class="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-600 font-bold hover:bg-slate-100 active:scale-95 transition text-[11px]">-0.5</button>
                                 <div class="relative flex items-center max-w-[75px]">
-                                    <input type="number" id="time-science" step="0.1" min="0" max="24" placeholder="0" class="w-full text-center font-extrabold text-slate-900 text-xs border border-slate-200 bg-white rounded-lg py-1 focus:outline-none focus:ring-1 focus:ring-indigo-500" />
+                                    <input type="number" id="time-english" step="0.1" min="0" max="24" placeholder="0" class="w-full text-center font-extrabold text-slate-900 text-xs border border-slate-200 bg-white rounded-lg py-1 focus:outline-none focus:ring-1 focus:ring-indigo-500" />
                                     <span class="absolute right-1.5 text-[9px] font-semibold text-slate-400 pointer-events-none">h</span>
                                 </div>
-                                <button type="button" onclick="adjustStudyTime('science', 0.5)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-100 active:scale-95 transition text-[10px]">+30분</button>
-                                <button type="button" onclick="adjustStudyTime('science', 1.0)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-100 active:scale-95 transition text-[10px]">+1시간</button>
+                                <button type="button" onclick="adjustStudyTime('english', 0.5)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-100 active:scale-95 transition text-[10px]">+30분</button>
+                                <button type="button" onclick="adjustStudyTime('english', 1.0)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-100 active:scale-95 transition text-[10px]">+1시간</button>
+                            </div>
+                        </div>
+
+                        <!-- 세계지리 -->
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-xl border border-amber-100 bg-amber-50 gap-2.5">
+                            <div class="flex items-center gap-2">
+                                <div class="p-1.5 rounded-lg bg-amber-500 text-white shadow-xs">
+                                    <i class="fa-solid fa-earth-asia text-xs"></i>
+                                </div>
+                                <span class="font-bold text-slate-900 text-xs">세계지리</span>
+                            </div>
+                            <div class="flex items-center gap-1 ml-auto sm:ml-0">
+                                <button type="button" onclick="adjustStudyTime('geography', -0.5)" class="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-600 font-bold hover:bg-slate-100 active:scale-95 transition text-[11px]">-0.5</button>
+                                <div class="relative flex items-center max-w-[75px]">
+                                    <input type="number" id="time-geography" step="0.1" min="0" max="24" placeholder="0" class="w-full text-center font-extrabold text-slate-900 text-xs border border-slate-200 bg-white rounded-lg py-1 focus:outline-none focus:ring-1 focus:ring-indigo-500" />
+                                    <span class="absolute right-1.5 text-[9px] font-semibold text-slate-400 pointer-events-none">h</span>
+                                </div>
+                                <button type="button" onclick="adjustStudyTime('geography', 0.5)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-100 active:scale-95 transition text-[10px]">+30분</button>
+                                <button type="button" onclick="adjustStudyTime('geography', 1.0)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-100 active:scale-95 transition text-[10px]">+1시간</button>
                             </div>
                         </div>
                     </div>
@@ -276,24 +257,6 @@
     <script>
         // --- 상수 정보 정의 ---
         const SUBJECT_CONFIG = {
-            korean: { 
-                name: '국어', 
-                color: 'rose', 
-                bg: 'bg-rose-50', 
-                border: 'border-rose-100', 
-                text: 'text-rose-600', 
-                accent: 'bg-rose-500',
-                icon: 'fa-book-open'
-            },
-            english: { 
-                name: '영어', 
-                color: 'indigo', 
-                bg: 'bg-indigo-50', 
-                border: 'border-indigo-100', 
-                text: 'text-indigo-600', 
-                accent: 'bg-indigo-500',
-                icon: 'fa-globe'
-            },
             math: { 
                 name: '수학', 
                 color: 'violet', 
@@ -303,14 +266,23 @@
                 accent: 'bg-violet-500',
                 icon: 'fa-calculator'
             },
-            science: { 
-                name: '과학', 
-                color: 'emerald', 
-                bg: 'bg-emerald-50', 
-                border: 'border-emerald-100', 
-                text: 'text-emerald-600', 
-                accent: 'bg-emerald-500',
-                icon: 'fa-flask'
+            english: { 
+                name: '영어', 
+                color: 'indigo', 
+                bg: 'bg-indigo-50', 
+                border: 'border-indigo-100', 
+                text: 'text-indigo-600', 
+                accent: 'bg-indigo-500',
+                icon: 'fa-language'
+            },
+            geography: { 
+                name: '세계지리', 
+                color: 'amber', 
+                bg: 'bg-amber-50', 
+                border: 'border-amber-100', 
+                text: 'text-amber-600', 
+                accent: 'bg-amber-500',
+                icon: 'fa-earth-asia'
             }
         };
 
@@ -434,12 +406,11 @@
         function handleAddLog(e) {
             e.preventDefault();
 
-            const koreanVal = parseFloat(document.getElementById('time-korean').value) || 0;
-            const englishVal = parseFloat(document.getElementById('time-english').value) || 0;
             const mathVal = parseFloat(document.getElementById('time-math').value) || 0;
-            const scienceVal = parseFloat(document.getElementById('time-science').value) || 0;
+            const englishVal = parseFloat(document.getElementById('time-english').value) || 0;
+            const geographyVal = parseFloat(document.getElementById('time-geography').value) || 0;
 
-            const total = koreanVal + englishVal + mathVal + scienceVal;
+            const total = mathVal + englishVal + geographyVal;
             if (total === 0) {
                 showToast('공부 시간을 30분(0.5시간) 이상 하나 이상 입력해주세요!', 'error');
                 return;
@@ -464,10 +435,9 @@
                 date: inputDate,
                 dayOfWeek: inputDay,
                 times: {
-                    korean: koreanVal,
-                    english: englishVal,
                     math: mathVal,
-                    science: scienceVal
+                    english: englishVal,
+                    geography: geographyVal
                 }
             };
 
@@ -476,10 +446,9 @@
             logs.sort((a, b) => b.date.localeCompare(a.date));
 
             // 입력 폼 필드 초기화
-            document.getElementById('time-korean').value = '';
-            document.getElementById('time-english').value = '';
             document.getElementById('time-math').value = '';
-            document.getElementById('time-science').value = '';
+            document.getElementById('time-english').value = '';
+            document.getElementById('time-geography').value = '';
 
             saveAndRefresh();
             showToast('오늘의 공부 시간이 성공적으로 등록되었습니다 🎉');
@@ -530,19 +499,17 @@
             }
 
             // 2. 전체 통계 산정
-            const totalStats = { korean: 0, english: 0, math: 0, science: 0, overall: 0 };
+            const totalStats = { math: 0, english: 0, geography: 0, overall: 0 };
             logs.forEach(log => {
-                totalStats.korean += log.times.korean || 0;
-                totalStats.english += log.times.english || 0;
                 totalStats.math += log.times.math || 0;
-                totalStats.science += log.times.science || 0;
+                totalStats.english += log.times.english || 0;
+                totalStats.geography += log.times.geography || 0;
             });
 
-            totalStats.korean = parseFloat(totalStats.korean.toFixed(1));
-            totalStats.english = parseFloat(totalStats.english.toFixed(1));
             totalStats.math = parseFloat(totalStats.math.toFixed(1));
-            totalStats.science = parseFloat(totalStats.science.toFixed(1));
-            totalStats.overall = parseFloat((totalStats.korean + totalStats.english + totalStats.math + totalStats.science).toFixed(1));
+            totalStats.english = parseFloat(totalStats.english.toFixed(1));
+            totalStats.geography = parseFloat(totalStats.geography.toFixed(1));
+            totalStats.overall = parseFloat((totalStats.math + totalStats.english + totalStats.geography).toFixed(1));
 
             // 왼쪽 하단 지표 정보 바인딩
             document.getElementById('overall-study-hours').innerText = totalStats.overall;
@@ -610,26 +577,23 @@
                         label,
                         range,
                         mondayDate,
-                        korean: 0,
-                        english: 0,
                         math: 0,
-                        science: 0,
+                        english: 0,
+                        geography: 0,
                         total: 0
                     };
                 }
-                weeksMap[id].korean += log.times.korean || 0;
-                weeksMap[id].english += log.times.english || 0;
                 weeksMap[id].math += log.times.math || 0;
-                weeksMap[id].science += log.times.science || 0;
+                weeksMap[id].english += log.times.english || 0;
+                weeksMap[id].geography += log.times.geography || 0;
             });
 
             const weeklyStats = Object.values(weeksMap)
                 .map(week => {
-                    week.korean = parseFloat(week.korean.toFixed(1));
-                    week.english = parseFloat(week.english.toFixed(1));
                     week.math = parseFloat(week.math.toFixed(1));
-                    week.science = parseFloat(week.science.toFixed(1));
-                    week.total = parseFloat((week.korean + week.english + week.math + week.science).toFixed(1));
+                    week.english = parseFloat(week.english.toFixed(1));
+                    week.geography = parseFloat(week.geography.toFixed(1));
+                    week.total = parseFloat((week.math + week.english + week.geography).toFixed(1));
                     return week;
                 })
                 .sort((a, b) => b.mondayDate.getTime() - a.mondayDate.getTime());
@@ -711,10 +675,9 @@
                     date: dateStr,
                     dayOfWeek: DAYS_OF_WEEK[current.getDay()],
                     times: {
-                        korean: parseFloat((Math.random() * 2 * multiplier).toFixed(1)),
-                        english: parseFloat((Math.random() * 2.5 * multiplier).toFixed(1)),
                         math: parseFloat((Math.random() * 3 * multiplier).toFixed(1)),
-                        science: parseFloat((Math.random() * 1.5 * multiplier).toFixed(1))
+                        english: parseFloat((Math.random() * 2.5 * multiplier).toFixed(1)),
+                        geography: parseFloat((Math.random() * 2 * multiplier).toFixed(1))
                     }
                 });
             }
@@ -752,10 +715,9 @@
             } catch (e) {
                 console.warn("Storage writing blocked or failed:", e);
             }
-            document.getElementById('time-korean').value = '';
-            document.getElementById('time-english').value = '';
             document.getElementById('time-math').value = '';
-            document.getElementById('time-science').value = '';
+            document.getElementById('time-english').value = '';
+            document.getElementById('time-geography').value = '';
             saveAndRefresh();
             closeConfirmModal();
             showToast('모든 데이터가 초기화되었습니다.', 'error');
